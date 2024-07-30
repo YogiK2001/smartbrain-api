@@ -7,8 +7,6 @@ const handleImage = (req, res, db) => {
         .catch(err => res.status(404).json('unable to get entries'));
 }
 
-// module.exports = {
-//     handleImage: handleImage
-// };
-
-export default handleImage;
+module.exports = {
+    handleImage: handleImage
+};
