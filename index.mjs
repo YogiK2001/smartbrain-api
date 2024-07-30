@@ -9,6 +9,13 @@ import signin from './controllers/signin.js';
 import profile from './controllers/profile.js';
 import image from './controllers/image.js';
 
+
+const clarifai = new Clarifai.App({
+    apiKey: process.env.API_CLARIFAI
+});
+
+
+
 const saltRounds = 10;
 const myPlaintextPassword = 's0/\\/\\P4$$w0rD';
 const someOtherPlaintextPassword = 'not_bacon';
@@ -24,14 +31,13 @@ const PORT = process.env.PORT || 3000;  // default to 3000 if PORT is not define
 const db = knex({
     client: 'pg',
     connection: {
-        host: 'dpg-cqkb9l2ju9rs738k42s0-a',
-        port: 5432, // Updated to the correct PostgreSQL port
-        user: 'db_ma7q_user',
-        password: '7Ct32MSqmHkYqRjTLMS8VPTlJmmi2jjd',
-        database: 'db_ma7q'
+        host: process.env.DATABASE_HOST,
+        port: 5432,
+        user: process.env.DATABASE_USER,
+        password: process.env.DATABASE_PW,
+        database: process.env.DATABASE_DB
     }
 });
-
 const app = express();
 
 app.use(express.json());
