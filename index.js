@@ -7,7 +7,7 @@ const cors = require('cors');
 const knex = require('knex');
 const Clarifai = require('clarifai');
 
-const register = require('./controllers/register');
+import register from "./controllers/register"
 const signin = require('./controllers/signin');
 const profile = require('./controllers/profile');
 const image = require('./controllers/image');
@@ -23,11 +23,11 @@ const PORT = process.env.PORT;
 const db = knex({
     client: 'pg',
     connection: {
-        host: '127.0.0.1',
+        host: 'dpg-cqkb9l2ju9rs738k42s0-a',
         port: 5432, // Updated to the correct PostgreSQL port
-        user: 'postgres',
-        password: 'guru',
-        database: 'smart-brain'
+        user: 'db_ma7q_user',
+        password: '7Ct32MSqmHkYqRjTLMS8VPTlJmmi2jjd',
+        database: 'db_ma7q'
     }
 });
 

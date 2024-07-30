@@ -27,6 +27,6 @@ const registerHandler = (req, res, db, bcrypt) => {
     })
 }
 
-module.exports = {
-    registerHandler: registerHandler
-}
+
+
+export default registerHandler;
