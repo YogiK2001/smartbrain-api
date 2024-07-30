@@ -7,7 +7,7 @@ const cors = require('cors');
 const knex = require('knex');
 const Clarifai = require('clarifai');
 
-import register from "./controllers/register"
+import register from "./controllers/register.js"
 const signin = require('./controllers/signin');
 const profile = require('./controllers/profile');
 const image = require('./controllers/image');
