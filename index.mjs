@@ -38,6 +38,7 @@ const db = knex({
         database: process.env.DATABASE_DB
     }
 });
+
 const app = express();
 
 app.use(express.json());
