@@ -23,6 +23,6 @@
     "nodemon": "^3.1.4"
   },
   "bin": {
-    "execute": "index.js"
+    "execute": "index.mjs"
   }
 }
