@@ -14,4 +14,5 @@ const handleProfile = (req, res, db) => {
     }
 }
 
-export default handleProfile;
+// export default handleProfile;
+module.exports.handleProfile = handleProfile;

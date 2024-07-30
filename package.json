@@ -2,11 +2,10 @@
   "name": "facereco-api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.mjs",
+  "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node index.mjs",
-    "install": "npm rebuild bcrypt --build-from-source"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
@@ -24,6 +23,6 @@
     "nodemon": "^3.1.4"
   },
   "bin": {
-    "execute": "index.mjs"
+    "execute": "index.js"
   }
 }
